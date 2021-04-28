@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=development jest",
+    "start": "node ./main.js",
+    "start:dev": "cross-env NODE_ENV=development node ./main.js",
+    "start:pro": "cross-env NODE_ENV=production node ./main.js",
+    "start:watch": "nodemon cross-env NODE_ENV=development ./main.js"
   },
   "author": "Grzegorz",
   "license": "ISC",
